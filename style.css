@@ -63,8 +63,8 @@ button{
     cursor: pointer;
 }
 
-#warning{
-    text-align:center;
+span {
+    text-align:left;
     color: red;
-    display: none;
+    margin:5px;
 }
