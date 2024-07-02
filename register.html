@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="registerBoard" id="board">
+    <header>
+        <img src="images/image.png" >
+        <p>Homefort Dashboard</p>
+    </header>
+    <form id="registerform">
+        <span id="warning">
+            
+        </span>
+
+        <label for="fname">Firstname</label>
+        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+
+        <label for="lname"> Lastname</label>
+        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+
+        <label for="email"> Email Address</label>
+        <input type="email" name="email" id="email" placeholder="e.g samueladedigba83.com" autocomplete="on">
+
+        <label for="tel">Phone Number</label>
+        <input type="tel" name="tel" id="tel" placeholder="e.g +234 9012345678" required autocomplete="on">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password" oninput="matchPassword()" required>
+        <span id="warningPassword">
+        </span>
+
+        <label for="confirmpassword"> Confirm Password </label>
+        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" oninput="matchPassword()" required>
+        <span id="warningconfirmpassword">
+        </span>
+
+        <button type="button">
+            Register
+        </button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
