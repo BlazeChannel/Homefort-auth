@@ -45,10 +45,8 @@ document.addEventListener('DOMContentLoaded', function(){
         fName,    lName,   eMail,   password,    confirmpassword,
         phoneNumber : document.getElementById('tel').value,
     };
-
     warning.textContent= 'Submitting...';
     warning.className = 'progress';
-
     fetch('https://667ee9bff2cb59c38dc775c7.mockapi.io/register', {
         method: 'POST',
         headers:

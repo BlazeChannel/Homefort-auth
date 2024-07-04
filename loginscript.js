@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const loginForm = document.getElementById('loginForm');
+window.addEventListener('DOMContentLoaded', function(){
+    const loginForm = document.getElementById('loginform');
     const warning = document.getElementById('warning');
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
         warning.innerHTML = '';
 
-        const eMail = document.getElementById('email').value.trim();
+        const eMail = document.getElementById('email').value;
         const passWord = document.getElementById('password').value;
 
         if (!eMail || !passWord) {
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function(){
             eMail,
             passWord,
         };
-
         warning.textContent = 'Submitting...';
         warning.className = 'progress';
 
@@ -38,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
             if (data.success) {
                 warning.textContent = 'Login successful!';
                 warning.className = 'success';
-                
-                // Redirect to a new page or perform any action upon successful login
-                // window.location.href = 'homepage.html';
             } else {
                 warning.textContent = 'Invalid email or password. Please try again.';
                 warning.className = 'error';
