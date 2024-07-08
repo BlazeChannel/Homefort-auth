@@ -6,8 +6,8 @@ window.addEventListener('DOMContentLoaded', function(){
         event.preventDefault();
         warning.innerHTML = '';
 
-        const eMail = document.getElementById('email').value;
-        const passWord = document.getElementById('password').value;
+        const eMail = document.getElementById('loginemail').value;
+        const passWord = document.getElementById('loginpassword').value;
 
         if (!eMail || !passWord) {
             warning.textContent = 'Please fill out all required fields.';
@@ -34,12 +34,13 @@ window.addEventListener('DOMContentLoaded', function(){
             return response.json();
         })
         .then(data => {
-            if (data.success) {
-                warning.textContent = 'Login successful!';
-                warning.className = 'success';
-            } else {
+            if (data.success) {                
                 warning.textContent = 'Invalid email or password. Please try again.';
                 warning.className = 'error';
+            } else {
+                warning.textContent = alert('Login successful!');
+                warning.className = 'success';
+                loginForm.reset();
             }
         })
         .catch(error => {
